@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #ffd4ee;
+}
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  box-shadow: #00000029 0 3px 6px, #0000003b 0 3px 6px;
+  transition: all 1s ease;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+.front {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background-image: url(./bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px 0;
+  padding: 30px;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background-color: #f8c5e4;
+  transform: rotateY(180deg);
+}
+.back h2 {
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+.back p {
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
